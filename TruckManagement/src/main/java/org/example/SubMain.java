@@ -31,7 +31,7 @@ public class SubMain {
         System.out.print("Enter the Truck ID : ");
         int id = scan.nextInt();
 
-        System.out.println("Fetching data by id : "+1);
+        System.out.println("Fetching data by id : "+id);
         Truck truck = truckService.getTruckById(id);
         System.out.println("Truck data : "+truck);
     }

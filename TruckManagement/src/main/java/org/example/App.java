@@ -17,42 +17,38 @@ public class App
         SubMain Smain = new SubMain();
         Scanner scan = new Scanner(System.in);
 
-        System.out.print("Enter the number to Perform a Operation :\n" +
-                "1. Add Truck \n" +
-                "2. Update Truck\n" +
-                "3. Delete Truck\n" +
-                "4. Get Truck By TruckId \n" +
-                "5. Get All Truck \n" +
-                "Press Any Key For Exit");
-        System.out.println();
+        while (true){
+            System.out.print("Enter the number to Perform a Operation :\n" +
+                    "1. Add Truck \n" +
+                    "2. Update Truck\n" +
+                    "3. Delete Truck\n" +
+                    "4. Get Truck By TruckId \n" +
+                    "5. Get All Truck \n" +
+                    "Press Any other number For Exit");
+            System.out.println();
 
-        int operation = scan.nextInt();
+            int operation = scan.nextInt();
 
-
-        switch (operation){
-            case 1 :
+            if(operation ==1){
                 System.out.println("Welcome To Truck Adding services ");
                 Smain.InsertTruck();
-                break;
-            case 2 :
+            } else if (operation == 2) {
                 System.out.println("Welcome To Truck Updating Services");
                 Smain.UpdateTruckData();
-                break;
-            case 3 :
+            } else if (operation == 3) {
                 Smain.DeleteTruckById();
-                break;
-            case 4 :
+            } else if (operation == 4) {
                 Smain.fetchTruck();
-                break;
-            case 5 :
+            } else if (operation == 5) {
                 Smain.GetAllTruck();
+            } else {
                 break;
-            default :
-                System.out.println("Thank You For Visiting.");
-
-
+            }
 
         }
+        System.out.println("Thank You for using my Application.");
+        System.out.println("See you soon.");
+
 
 
 
